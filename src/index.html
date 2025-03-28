@@ -5,81 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta Aleatoria</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .card {
-            border: 1px solid #000;
-            border-radius: 15px;
-            background-color: white;
-            position: relative;
-            width: 250px;
-            height: 350px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .heart {
-            color: red;
-        }
-
-        .spade {
-            color: black;
-        }
-
-        .club {
-            color: green;
-        }
-
-        .diamond {
-            color: red;
-        }
-
-        .card-value {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        body {
-            background-color: #4CAF50;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 0;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .card-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .card-top, .card-bottom {
-            font-size: 2rem;
-            position: absolute;
-            font-weight: bold;
-        }
-
-        .card-top {
-            top: 5px;
-            left: 5px;
-        }
-
-        .card-bottom {
-            bottom: 5px;
-            right: 5px;
-            transform: rotate(180deg);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -90,53 +16,6 @@
         </div>
     </div>
 
-    <script>
-        const palos = ['spade', 'club', 'heart', 'diamond'];
-        const valores = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Rey', 'Reina', 'Jota', 'As'];
-
-        function generarCarta() {
-            const paloAleatorio = palos[Math.floor(Math.random() * palos.length)];
-            const valorAleatorio = valores[Math.floor(Math.random() * valores.length)];
-
-            const carta = `
-                <div class="card-top">${valorAleatorio}</div>
-                <div class="card-value ${paloAleatorio}">
-                    <span class="card-suit">${getSimboloPalo(paloAleatorio)}</span>
-                </div>
-                <div class="card-bottom">${valorAleatorio}</div>
-            `;
-            
-            return carta;
-        }
-
-        function getSimboloPalo(palo) {
-            switch(palo) {
-                case 'heart':
-                    return '♥';
-                case 'spade':
-                    return '♠';
-                case 'club':
-                    return '♣';
-                case 'diamond':
-                    return '♦';
-                default:
-                    return '';
-            }
-        }
-
-        function mostrarCarta() {
-            const cardContainer = document.getElementById('card-container');
-            cardContainer.innerHTML = generarCarta();
-        }
-
-        mostrarCarta();
-
-        setInterval(mostrarCarta, 10000);
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="app.js"></script> 
 </body>
 </html>
