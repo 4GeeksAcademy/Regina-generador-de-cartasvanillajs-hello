@@ -66,3 +66,7 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+
+.red-symbol {
+    color: red;
+}

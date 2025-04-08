@@ -19,13 +19,13 @@ function generarCarta() {
 function getSimboloPalo(palo) {
     switch(palo) {
         case 'heart':
-            return '♥';
+            return '<span class="red-symbol">♥</span>';
         case 'spade':
             return '♠';
         case 'club':
             return '♣';
         case 'diamond':
-            return '♦';
+            return '<span class="red-symbol">♦</span>';
         default:
             return '';
     }
