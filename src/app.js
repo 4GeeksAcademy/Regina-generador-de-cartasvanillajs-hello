@@ -6,11 +6,11 @@ function generarCarta() {
     const valorAleatorio = valores[Math.floor(Math.random() * valores.length)];
 
     const carta = `
-        <div class="card-top">${valorAleatorio}</div>
+        <div class="card-top">${getSimboloPalo(paloAleatorio)}</div>
         <div class="card-value ${paloAleatorio}">
-            <span class="card-suit">${getSimboloPalo(paloAleatorio)}</span>
+            <span class="card-suit">${valorAleatorio}</span>
         </div>
-        <div class="card-bottom">${valorAleatorio}</div>
+        <div class="card-bottom">${getSimboloPalo(paloAleatorio)}</div>
     `;
     
     return carta;

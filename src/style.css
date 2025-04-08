@@ -6,6 +6,7 @@
     width: 250px;
     height: 350px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
@@ -13,25 +14,36 @@
     text-align: center;
 }
 
-.heart {
-    color: red;
-}
-
-.spade {
-    color: black;
-}
-
-.club {
-    color: green;
-}
-
-.diamond {
-    color: red;
-}
-
 .card-value {
     font-size: 3rem;
     font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.card-top, .card-bottom {
+    font-size: 3rem;
+    position: absolute;
+    font-weight: bold;
+}
+
+.card-top {
+    top: 5px;
+    left: 5px;
+}
+
+.card-bottom {
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(180deg);
+}
+
+.card-suit {
+    font-size: 8rem;
+}
+
+.heart, .spade, .club, .diamond {
+    font-size: 8rem;
 }
 
 body {
@@ -54,22 +66,3 @@ body {
     align-items: center;
     margin-top: 20px;
 }
-
-.card-top, .card-bottom {
-    font-size: 2rem;
-    position: absolute;
-    font-weight: bold;
-}
-
-.card-top {
-    top: 5px;
-    left: 5px;
-}
-
-.card-bottom {
-    bottom: 5px;
-    right: 5px;
-    transform: rotate(180deg);
-}
-
-
